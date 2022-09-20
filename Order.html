@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mix Fruit Juicer</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body class="img js-fullheight" style="background-image: url(images/bg1234.jpg); height: auto; width: auto;">
+    <iframe src="css/Nav.html" width="1900" height="200" frameborder="0"></iframe>
+    <div class="container p-5 my-5 bg-dark text-white">
+        <span id="msg" style="color:red"></span>
+        <label id="Choose Your Juice" name="Choose Your Juice" style="float: none;"><h1>Choose Your Juice Quantity in %</h1></label><br><br>
+        <p>Make sure that the combination of both juice total = 100% means 150ml</p><br><br>
+        <label>Fruit Juice 1</label>
+        <input type="number" placeholder="In %" id="No1" required><br><br>
+        <label>Fruit Juice 2</label>
+        <input type="number" placeholder="In %" id="No2" required><br><br>
+        <button id="order" class="btn-primary">Order My Juice</button>
+    </div>
+    <script>
+        let FJ=document.getElementById("No1");
+        let SJ=document.getElementById("No2");
+        if(FJ+SJ!=100)
+        {
+            document.getElementById("msg").innerHTML="Sorry,both juice total !=100% please,select right...";
+        }
+        else{
+    
+        }
+    </script>
+</body>
+</html>
