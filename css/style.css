@@ -2371,7 +2371,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   line-height: 1.5;
   color: #212529;
-  background-color: transparent;
+  background-color: none;
   border: solid transparent;
   border-width: 1px 0;
 }
@@ -11834,12 +11834,12 @@ h5,
 }
 
 .form-control {
-  background: transparent;
+  background: none;
   border: none;
   height: 50px;
   color: white !important;
   border: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0);
   border-radius: 40px;
   padding-left: 20px;
   padding-right: 20px;
@@ -11878,7 +11878,7 @@ h5,
 
 .form-control:hover,
 .form-control:focus {
-  background: transparent;
+  background: none;
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
