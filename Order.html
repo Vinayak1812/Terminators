@@ -19,21 +19,41 @@
         <span id="msg" style="color:red"></span>
         <label id="Choose Your Juice" name="Choose Your Juice" style="float: none;"><h1>Choose Your Juice Quantity in %</h1></label><br><br>
         <p>Make sure that the combination of both juice total = 100% means 150ml</p><br><br>
-        <label>Fruit Juice 1</label>
-        <input type="number" placeholder="In %" id="No1" required><br><br>
-        <label>Fruit Juice 2</label>
-        <input type="number" placeholder="In %" id="No2" required><br><br>
-        <button id="order" class="btn-primary">Order My Juice</button>
+        <form id="order_form" action="" method="post">
+            <label>Fruit Juice 1</label>
+            <input type="number" value="" name="juice_1"required placeholder="In %" id="No1" required><br><br>
+            <label>Fruit Juice 2</label>
+            <input type="number" value="" name="juice_2" required placeholder="In %" id="No2" required><br><br>
+            <button id="order" class="btn-primary">Order My Juice</button>
+        </form>
     </div>
     <script>
-        let FJ=document.getElementById("No1");
-        let SJ=document.getElementById("No2");
-        if(FJ+SJ!=100)
-        {
-            document.getElementById("msg").innerHTML="Sorry,both juice total !=100% please,select right...";
+        const form = document.getElementById("order_form");
+        let FJ=document.querySelector("input#No1");
+        let SJ=document.querySelector("input#No2");
+        form.addEventListener("submit", checkValue);
+        function checkValue(evt){
+            evt.preventDefault();
+            
+            if(parseInt(FJ.value)+parseInt(SJ.value)!=100)
+            {
+                document.getElementById("msg").innerHTML="Sorry,both juice total !=100% please,select right...";
+                alert("Both juice must add upto 100%");
+            } else {
+                evt.target.submit();
+            }
         }
-        else{
-    
+        FJ.onchange = function(evt){
+            if(evt.target.value>100){
+                evt.target.value = 100
+            }
+            SJ.value = 100-evt.target.value;
+        }
+        SJ.onchange = function(evt){
+            if(evt.target.value>100){
+                evt.target.value = 100
+            }
+            FJ.value = 100-evt.target.value;
         }
     </script>
 </body>
