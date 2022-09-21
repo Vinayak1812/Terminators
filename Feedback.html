@@ -9,7 +9,7 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="css/Nav.html">
     <link rel="stylesheet" href="css/style.css" />
-    <title>Let Us Know Your Feedback</title>
+    <title>Smart Juicer Feedback</title>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
@@ -19,27 +19,27 @@
     }
 
     body {
-        background: #4e54c8;
+        background:violet;
         background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
-        background: linear-gradient(to right, #8f94fb, #4e54c8);
+        background: linear-gradient(to right, #8f94fb, violet);
         font-family: 'Montserrat', sans-serif;
         overflow: hidden;
         height: 100vh;
     }
 
     .panel-container {
-        background-color: #12192c;
+        background-color:#8f94fb;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         border-radius: 15px;
-        font-size: 90%;
+        font-size: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         padding: 30px;
-        max-width: 400px;
-        color: #4e54c8;
+        max-width: 450px;
+        color: #000;
         margin: 10% auto 2% auto;
     }
 
@@ -70,9 +70,9 @@
     }
 
     .rating small {
-        color: #fff;
+        color: #000;
         display: inline-block;
-        margin: 10px 0 0;
+        margin: 5px 0 0;
     }
 
     .rating:hover small,
@@ -115,23 +115,29 @@
 </style>
 
 <body>
-    <iframe src="css/Nav.html" width="1500" height="1000" frameborder="0"></iframe>
+    <iframe src="css/Nav.html" width="1500" frameborder="0"></iframe>
     <div id="panel" class="panel-container">
         <strong>How satisfied are you with our <br /> customer support performance?</strong>
         <div class="ratings-container">
             <div class="rating">
-                <img src="C:\Users\LENOVO\Downloads\login-form-20\images\unhappy.jpg" alt="">
-                <small>Unhappy</small>
+                <img src="images/worst.jpg" alt="">
+                <small>Worst</small>
             </div>
-
             <div class="rating">
-                <img src="C:\Users\LENOVO\Downloads\login-form-20\images\neutral.jpg" alt="">
-                <small>Neutral</small>
+                <img src="images/poor.jpg" alt="">
+                <small>Poor</small>
             </div>
-
-            <div class="rating active">
-                <img src="C:\Users\LENOVO\Downloads\login-form-20\images\happy.jpg" alt="">
-                <small>Satisfied</small>
+            <div class="rating">
+                <img src="images/average.jpg" alt="">
+                <small>Average</small>
+            </div>
+            <div class="rating">
+                <img src="images/good.jpg" alt="">
+                <small>Good</small>
+            </div>
+            <div class="rating">
+                <img src="images/Excellent.jpg" alt="">
+                <small>Excellent</small>
             </div>
         </div>
         <button class="btn" id="send">Send Review</button>
